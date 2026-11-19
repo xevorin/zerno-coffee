@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Зерно — кофейня у дома с 7:30</title>
+<meta name="description" content="Кофейня «Зерно» на Липовой, 12: свежая обжарка раз в неделю, меню с ценами, акции дня и заказ с собой без очереди. Открываемся в 7:30.">
+<meta name="theme-color" content="#2B1A12">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:title" content="Зерно — кофейня у дома с 7:30">
+<meta property="og:description" content="Меню с ценами, акции дня и заказ с собой без очереди. Учебный проект Егора Фарафонова.">
+<meta property="og:url" content="https://xevorin.github.io/zerno-coffee/">
+<meta property="og:image" content="https://xevorin.github.io/zerno-coffee/screenshot.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232B1A12'/%3E%3Cellipse cx='32' cy='32' rx='14' ry='20' fill='%23E8873A' transform='rotate(25 32 32)'/%3E%3Cpath d='M26 16c8 8 4 24 12 32' stroke='%232B1A12' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Перейти к содержимому</a>
+
+<header class="top">
+  <div class="wrap top__in">
+    <a class="logo" href="#top" aria-label="Зерно, на главную">
+      <svg class="logo__mark" viewBox="0 0 64 64" aria-hidden="true"><ellipse cx="32" cy="32" rx="14" ry="20" fill="#E8873A" transform="rotate(25 32 32)"/><path d="M26 16c8 8 4 24 12 32" stroke="#2B1A12" stroke-width="3.5" fill="none" stroke-linecap="round"/></svg>
+      Зерно
+    </a>
+    <nav class="nav" aria-label="Разделы">
+      <a href="#menu">Меню</a>
+      <a href="#deals">Акции</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#find">Как найти</a>
+    </nav>
+    <a class="top__phone" href="tel:+79000000000">+7 900 000-00-00</a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" id="top" aria-labelledby="hero-title">
+    <div class="wrap hero__in">
+      <div class="hero__text">
+        <h1 id="hero-title">Кофе у дома с&nbsp;7:30 утра</h1>
+        <p class="lead">Обжариваем зерно сами, раз в неделю. Оформите заказ на сайте и заберите стакан без очереди — по дороге на работу или к метро.</p>
+        <div class="btns">
+          <button class="btn btn--primary" type="button" data-open-order>Заказать с собой</button>
+          <a class="btn btn--ghost" href="#menu">Смотреть меню</a>
+        </div>
+        <dl class="facts">
+          <div><dt>Адрес</dt><dd>ул. Липовая, 12, вход со двора</dd></div>
+          <div><dt>Будни</dt><dd>7:30–21:00</dd></div>
+          <div><dt>Выходные</dt><dd>9:00–21:00</dd></div>
+        </dl>
+      </div>
+      <div class="cup" aria-hidden="true">
+        <div class="cup__saucer"><div class="cup__body"><div class="cup__foam"></div></div><div class="cup__handle"></div></div>
+        <div class="cup__bean cup__bean--1"></div>
+        <div class="cup__bean cup__bean--2"></div>
+        <div class="cup__bean cup__bean--3"></div>
+        <div class="cup__tag">Капучино 0,3<b>190 ₽</b></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section menu" id="menu" aria-labelledby="menu-title">
+    <div class="wrap">
+      <div class="section__head">
+        <h2 id="menu-title">Меню</h2>
+        <p>Цены за стакан 0,3 л, если не указано другое. Молоко можно заменить на овсяное или миндальное, +40 ₽.</p>
+      </div>
+
+      <div class="tabs" role="tablist" aria-label="Категории меню">
+        <button class="tab" role="tab" id="tab-coffee" aria-controls="panel-coffee" aria-selected="true">Кофе</button>
+        <button class="tab" role="tab" id="tab-other" aria-controls="panel-other" aria-selected="false" tabindex="-1">Не кофе</button>
+        <button class="tab" role="tab" id="tab-bakery" aria-controls="panel-bakery" aria-selected="false" tabindex="-1">Выпечка</button>
+      </div>
+
+      <div class="panel" role="tabpanel" id="panel-coffee" aria-labelledby="tab-coffee" tabindex="0">
+        <ul class="items">
+          <li class="item" data-id="espresso" data-name="Эспрессо" data-price="120"><h3>Эспрессо</h3><span class="dots" aria-hidden="true"></span><b>120 ₽</b><p>30 мл, бразилия и эфиопия</p></li>
+          <li class="item" data-id="americano" data-name="Американо" data-price="160"><h3>Американо</h3><span class="dots" aria-hidden="true"></span><b>160 ₽</b><p>Двойной эспрессо и горячая вода</p></li>
+          <li class="item" data-id="cappuccino" data-name="Капучино" data-price="190"><h3>Капучино</h3><span class="dots" aria-hidden="true"></span><b>190 ₽</b><p>Плотная пена, без сиропов</p></li>
+          <li class="item" data-id="flatwhite" data-name="Флэт уайт" data-price="220"><h3>Флэт уайт</h3><span class="dots" aria-hidden="true"></span><b>220 ₽</b><p>Двойной эспрессо, меньше молока</p></li>
+          <li class="item" data-id="raf" data-name="Раф" data-price="240"><h3>Раф</h3><span class="dots" aria-hidden="true"></span><b>240 ₽</b><p>Сливки и ванильный сахар</p></li>
+        </ul>
+      </div>
+      <div class="panel" role="tabpanel" id="panel-other" aria-labelledby="tab-other" tabindex="0" hidden>
+        <ul class="items">
+          <li class="item" data-id="cocoa" data-name="Какао" data-price="180"><h3>Какао</h3><span class="dots" aria-hidden="true"></span><b>180 ₽</b><p>Бельгийский порошок, молоко 3,2%</p></li>
+          <li class="item" data-id="matcha" data-name="Матча латте" data-price="230"><h3>Матча латте</h3><span class="dots" aria-hidden="true"></span><b>230 ₽</b><p>Японская матча, можно на овсяном</p></li>
+          <li class="item" data-id="tea" data-name="Чай в чайнике" data-price="200"><h3>Чай в чайнике</h3><span class="dots" aria-hidden="true"></span><b>200 ₽</b><p>Ассам, сенча или иван-чай, 0,5 л</p></li>
+          <li class="item" data-id="lemonade" data-name="Лимонад облепиха-мята" data-price="210"><h3>Лимонад облепиха-мята</h3><span class="dots" aria-hidden="true"></span><b>210 ₽</b><p>0,4 л, со льдом</p></li>
+        </ul>
+      </div>
+      <div class="panel" role="tabpanel" id="panel-bakery" aria-labelledby="tab-bakery" tabindex="0" hidden>
+        <ul class="items">
+          <li class="item" data-id="croissant" data-name="Круассан" data-price="150"><h3>Круассан</h3><span class="dots" aria-hidden="true"></span><b>150 ₽</b><p>Сливочное масло 82%, печём утром</p></li>
+          <li class="item" data-id="cinnabon" data-name="Синнабон" data-price="190"><h3>Синнабон</h3><span class="dots" aria-hidden="true"></span><b>190 ₽</b><p>Корица и сливочный крем</p></li>
+          <li class="item" data-id="cheesecake" data-name="Чизкейк" data-price="260"><h3>Чизкейк</h3><span class="dots" aria-hidden="true"></span><b>260 ₽</b><p>Нью-Йорк, кусок 120 г</p></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section deals" id="deals" aria-labelledby="deals-title">
+    <div class="wrap">
+      <div class="section__head">
+        <h2 id="deals-title">Акции дня</h2>
+        <p>Полоса — будний день с 7:30 до 21:00. Скидки не складываются.</p>
+      </div>
+      <div class="day" aria-hidden="true">
+        <span style="left:0">7:30</span><span style="left:11.1%">9:00</span><span style="left:55.6%">15:00</span><span style="left:100%">21:00</span>
+      </div>
+      <ul class="deals__list">
+        <li class="deal">
+          <div class="deal__text"><h3>Ранний стакан</h3><p class="deal__time">7:30–9:00</p><p>Любой кофе до девяти утра на 20% дешевле. Капучино выходит за 152 ₽.</p></div>
+          <div class="deal__track"><span style="left:0;width:11.1%"></span></div>
+        </li>
+        <li class="deal">
+          <div class="deal__text"><h3>Кофе и круассан за 290 ₽</h3><p class="deal__time">весь день</p><p>Капучино или флэт уайт с круассаном. По отдельности вышло бы 340–370 ₽.</p></div>
+          <div class="deal__track"><span style="left:0;width:100%"></span></div>
+        </li>
+        <li class="deal">
+          <div class="deal__text"><h3>Выпечка на 30% дешевле</h3><p class="deal__time">20:00–21:00</p><p>Всё, что осталось на витрине вечером. Утром печём заново.</p></div>
+          <div class="deal__track"><span style="left:92.6%;width:7.4%"></span></div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section reviews" id="reviews" aria-labelledby="reviews-title">
+    <div class="wrap">
+      <div class="section__head">
+        <h2 id="reviews-title">Отзывы</h2>
+        <p>Примеры отзывов для учебного макета.</p>
+      </div>
+      <ul class="reviews__grid">
+        <li class="review">
+          <p class="review__stars" aria-label="Оценка 5 из 5">★★★★★</p>
+          <blockquote>Беру флэт уайт каждое утро по пути к метро. Заказываю с телефона, когда выхожу из подъезда, и стакан уже стоит на стойке.</blockquote>
+          <p class="review__who">Марина, живёт в соседнем доме</p>
+        </li>
+        <li class="review">
+          <p class="review__stars" aria-label="Оценка 5 из 5">★★★★★</p>
+          <blockquote>Круассаны тут лучше, чем в пекарне через дорогу. После восьми вечера ещё и дешевле, если успеть.</blockquote>
+          <p class="review__who">Артём, ходит по вечерам</p>
+        </li>
+        <li class="review">
+          <p class="review__stars" aria-label="Оценка 4 из 5">★★★★<span class="dim">★</span></p>
+          <blockquote>Хороший раф и спокойно сидеть с ноутбуком. Розеток всего четыре, поэтому прихожу пораньше.</blockquote>
+          <p class="review__who">Ильдар, работает удалённо</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section find" id="find" aria-labelledby="find-title">
+    <div class="wrap find__in">
+      <div class="find__text">
+        <h2 id="find-title">Как найти</h2>
+        <p class="find__addr">ул. Липовая, 12</p>
+        <p>Вход со двора, через арку рядом с аптекой. От метро 6 минут пешком. Ищите оранжевую дверь и вывеску с зерном.</p>
+        <dl class="hours">
+          <div><dt>Понедельник — пятница</dt><dd>7:30–21:00</dd></div>
+          <div><dt>Суббота и воскресенье</dt><dd>9:00–21:00</dd></div>
+        </dl>
+        <a class="btn btn--primary" href="https://www.openstreetmap.org/?mlat=55.7602&amp;mlon=37.6085#map=17/55.7602/37.6085" target="_blank" rel="noopener">Открыть карту</a>
+      </div>
+      <div class="map">
+        <iframe title="Карта: кофейня «Зерно»" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=37.6025%2C55.7575%2C37.6145%2C55.7629&amp;layer=mapnik&amp;marker=55.7602%2C37.6085"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contacts" id="contacts" aria-labelledby="contacts-title">
+    <div class="wrap">
+      <h2 id="contacts-title">Контакты</h2>
+      <ul class="contacts__grid">
+        <li><span>Телефон</span><a href="tel:+79000000000">+7 900 000-00-00</a></li>
+        <li><span>Telegram</span><strong>@zerno_coffee</strong></li>
+        <li><span>Почта</span><a href="mailto:hello@zerno.example">hello@zerno.example</a></li>
+      </ul>
+      <p class="note">Контакты вымышленные: кофейня придумана для портфолио.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__in">
+    <span class="footer__logo">Зерно</span>
+    <p>Учебный проект · Егор Фарафонов · <a href="https://www.fl.ru/users/farafonovegor07/">профиль на FL.ru</a></p>
+  </div>
+</footer>
+
+<dialog class="order" id="order" aria-labelledby="order-title">
+  <div class="order__box">
+    <button class="order__close" type="button" data-close-order aria-label="Закрыть">×</button>
+
+    <form class="order__form" id="order-form" novalidate>
+      <h2 id="order-title">Заказ с собой</h2>
+      <p class="order__sub">Соберём к выбранному времени, оплата на месте.</p>
+
+      <div class="field">
+        <label for="o-name">Имя</label>
+        <input id="o-name" name="name" type="text" autocomplete="given-name" required maxlength="40">
+        <p class="field__err" id="o-name-err" hidden>Напишите, как к вам обращаться.</p>
+      </div>
+      <div class="field">
+        <label for="o-phone">Телефон</label>
+        <input id="o-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 900 000-00-00" required aria-describedby="o-phone-err">
+        <p class="field__err" id="o-phone-err" hidden>Нужен российский номер из 11 цифр, например +7 900 123-45-67.</p>
+      </div>
+      <div class="field">
+        <label for="o-time">Когда заберёте</label>
+        <select id="o-time" name="time" required></select>
+      </div>
+
+      <fieldset class="picker">
+        <legend>Что приготовить</legend>
+        <ul class="picker__list" id="picker"></ul>
+        <p class="field__err" id="o-items-err" hidden>Добавьте хотя бы одну позицию.</p>
+      </fieldset>
+
+      <div class="order__total">
+        <span>Итого</span>
+        <output id="o-total" for="picker" aria-live="polite">0 ₽</output>
+      </div>
+      <button class="btn btn--primary btn--wide" type="submit">Отправить заказ</button>
+      <p class="order__demo">Демо-форма: заказ никуда не отправляется</p>
+    </form>
+
+    <div class="order__done" id="order-done" hidden tabindex="-1">
+      <div class="order__check" aria-hidden="true">✓</div>
+      <h2>Заказ принят</h2>
+      <p id="order-summary"></p>
+      <button class="btn btn--primary" type="button" data-close-order>Готово</button>
+      <p class="order__demo">Демо-форма: заказ никуда не отправляется</p>
+    </div>
+  </div>
+</dialog>
+
+<script src="script.js"></script>
+</body>
+</html>
