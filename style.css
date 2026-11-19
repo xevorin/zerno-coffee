@@ -20,7 +20,6 @@ body {
   background: var(--espresso);
   color: var(--oat);
   font: 400 16px/1.55 var(--sans);
-  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
 img, svg, iframe { display: block; max-width: 100%; }
@@ -37,7 +36,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 700; line-height: 1.1; colo
 }
 .skip:focus { top: 12px; }
 
-.wrap { width: min(1160px, 100% - 32px); margin-inline: auto; }
+.wrap { width: min(1160px, 100%); margin-inline: auto; }
 
 /* header */
 .top {
@@ -45,6 +44,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 700; line-height: 1.1; colo
   background: rgba(43, 26, 18, .92);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid rgba(107, 76, 59, .5);
+  padding: 0 16px;
 }
 .top__in { display: flex; align-items: center; gap: 24px; height: 68px; }
 .logo { display: flex; align-items: center; gap: 10px; font: 700 24px var(--serif); color: var(--oat-2); text-decoration: none; }
@@ -69,7 +69,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 700; line-height: 1.1; colo
 .btn--wide { width: 100%; }
 
 /* hero */
-.hero { padding: 64px 0 80px; }
+.hero { padding: 64px 16px 80px; }
 .hero__in { display: grid; grid-template-columns: 1.1fr 1fr; gap: 48px; align-items: center; }
 .hero h1 { font-size: clamp(42px, 6.4vw, 76px); line-height: 1.02; letter-spacing: -.01em; max-width: 9.5em; }
 .lead { margin-top: 22px; color: var(--muted); font-size: 18px; max-width: 470px; }
@@ -81,9 +81,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 700; line-height: 1.1; colo
 .cup {
   position: relative; aspect-ratio: 1 / 1; max-height: 480px; width: 100%;
   border-radius: 24px; overflow: hidden;
-  background:
-    radial-gradient(circle at 80% 15%, rgba(232, 135, 58, .22), transparent 40%),
-    linear-gradient(160deg, #4A2F22, #321F16);
+  background: linear-gradient(160deg, #4A2F22, #321F16);
 }
 .cup__saucer {
   position: absolute; left: 50%; top: 50%; width: 74%; aspect-ratio: 1; translate: -50% -50%;
@@ -120,7 +118,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 700; line-height: 1.1; colo
 .cup__tag b { display: block; font: 700 22px var(--serif); }
 
 /* sections */
-.section { padding: 80px 0; }
+.section { padding: 80px 16px; }
 .section__head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 12px 40px; margin-bottom: 32px; }
 .section h2 { font-size: clamp(32px, 4.4vw, 46px); }
 .section__head p { color: var(--muted); max-width: 460px; }
@@ -165,9 +163,8 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 700; line-height: 1.1; colo
 
 /* reviews */
 .reviews { background: var(--brown); }
-.reviews__grid { display: grid; grid-template-columns: repeat(3, 1fr); }
-.review { display: flex; flex-direction: column; gap: 14px; padding: 4px 32px; border-left: 1px solid var(--line); }
-.review:first-child { padding-left: 0; border-left: 0; }
+.reviews__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px 64px; }
+.review { display: flex; flex-direction: column; gap: 14px; }
 .review__stars { color: var(--orange); letter-spacing: 2px; }
 .review__stars .dim { color: var(--line); }
 .review blockquote { font: 500 19px/1.6 var(--serif); color: var(--oat-2); flex: 1; }
@@ -195,7 +192,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 700; line-height: 1.1; colo
 .note { margin-top: 16px; font-size: 13px; color: var(--muted); }
 
 /* footer */
-.footer { border-top: 1px solid var(--brown-2); padding: 28px 0; }
+.footer { border-top: 1px solid var(--brown-2); padding: 28px 16px; }
 .footer__in { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px 24px; }
 .footer__logo { font: 700 22px var(--serif); color: var(--oat-2); }
 .footer p { color: var(--muted); font-size: 14px; }
@@ -233,7 +230,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 700; line-height: 1.1; colo
 .pick { display: flex; align-items: center; gap: 12px; padding: 10px 12px; border-bottom: 1px solid #EFE3D3; }
 .pick:last-child { border-bottom: 0; }
 .pick__name { flex: 1; min-width: 0; font-size: 15px; }
-.pick__name small { display: block; color: #8A6A55; font-size: 13px; }
+.pick__name small { display: block; color: #6B4C3B; font-size: 13px; }
 .qty { display: flex; align-items: center; gap: 4px; }
 .qty button {
   width: 34px; height: 34px; border-radius: 50%; border: 1.5px solid #D6C1A6; background: var(--oat-2);
@@ -244,7 +241,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 700; line-height: 1.1; colo
 .qty output { min-width: 24px; text-align: center; font-weight: 700; }
 .order__total { display: flex; justify-content: space-between; align-items: baseline; margin: 18px 0 16px; font-weight: 700; }
 .order__total output { font: 700 28px var(--serif); }
-.order__demo { margin-top: 12px; text-align: center; font-size: 12px; color: #8A6A55; }
+.order__demo { margin-top: 12px; text-align: center; font-size: 12px; color: #6B4C3B; }
 .order__done { text-align: center; padding: 20px 0 4px; }
 .order__done:focus { outline: none; }
 .order__done h2 { padding: 0; margin: 14px 0 8px; }
@@ -259,12 +256,10 @@ body.no-scroll { overflow: hidden; }
 @media (max-width: 960px) {
   .nav { display: none; }
   .top__phone { margin-left: auto; }
-  .hero { padding: 40px 0 64px; }
+  .hero { padding: 40px 16px 64px; }
   .hero__in { grid-template-columns: 1fr; gap: 36px; }
   .cup { max-height: 420px; max-width: 520px; }
-  .reviews__grid { grid-template-columns: 1fr; gap: 28px; }
-  .review, .review:first-child { padding: 0 0 28px; border-left: 0; border-bottom: 1px solid var(--line); }
-  .review:last-child { border-bottom: 0; padding-bottom: 0; }
+  .reviews__grid { grid-template-columns: 1fr; gap: 40px; }
   .items { grid-template-columns: 1fr; }
   .day { margin-left: 0; }
   .deal { grid-template-columns: 1fr; gap: 14px; }
@@ -275,7 +270,7 @@ body.no-scroll { overflow: hidden; }
   .top__in { height: 60px; gap: 12px; }
   .top__phone { font-size: 14px; }
   .logo { font-size: 21px; }
-  .section { padding: 56px 0; }
+  .section { padding: 56px 16px; }
   .contacts { padding-top: 0; }
   .lead { font-size: 16px; }
   .btns .btn { flex: 1 1 100%; }

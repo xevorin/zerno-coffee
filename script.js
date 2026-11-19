@@ -138,6 +138,10 @@
   phoneIn.addEventListener('input', function () {
     if (phoneIn.getAttribute('aria-invalid') === 'true' && phoneOk(phoneIn.value)) setErr(phoneIn, 'o-phone-err', false);
   });
+  var consentBox = document.getElementById('o-consent');
+  consentBox.addEventListener('change', function () {
+    if (consentBox.checked) setErr(consentBox, 'o-consent-err', false);
+  });
   nameIn.addEventListener('input', function () {
     if (nameIn.value.trim()) setErr(nameIn, 'o-name-err', false);
   });
@@ -177,7 +181,7 @@
 
   function resetForm() {
     form.reset();
-    [nameIn, phoneIn].forEach(function (i) { i.removeAttribute('aria-invalid'); });
+    [nameIn, phoneIn, consentBox].forEach(function (i) { i.removeAttribute('aria-invalid'); });
     form.querySelectorAll('.field__err').forEach(function (p) { p.hidden = true; });
     menu.forEach(function (m) { qty[m.id] = 0; });
     form.hidden = false;
