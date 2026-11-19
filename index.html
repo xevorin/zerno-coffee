@@ -13,9 +13,7 @@
 <meta property="og:url" content="https://xevorin.github.io/zerno-coffee/">
 <meta property="og:image" content="https://xevorin.github.io/zerno-coffee/screenshot.png">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232B1A12'/%3E%3Cellipse cx='32' cy='32' rx='14' ry='20' fill='%23E8873A' transform='rotate(25 32 32)'/%3E%3Cpath d='M26 16c8 8 4 24 12 32' stroke='%232B1A12' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="fonts/fonts.css">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -189,9 +187,14 @@
 <footer class="footer">
   <div class="wrap footer__in">
     <span class="footer__logo">Зерно</span>
-    <p>Учебный проект · Егор Фарафонов · <a href="https://www.fl.ru/users/farafonovegor07/">профиль на FL.ru</a></p>
+    <p>Учебный проект · Егор Фарафонов · <a href="https://www.fl.ru/users/farafonovegor07/">профиль на FL.ru</a> · <a href="privacy.html">Политика обработки персональных данных</a></p>
   </div>
 </footer>
+
+<div class="cookie" id="cookie" role="region" aria-label="Уведомление о cookie" hidden>
+  <p>Сайт сохраняет в браузере только ваш выбор в этом окне. Аналитики и рекламных счётчиков нет. Подробнее — в <a href="privacy.html">политике обработки данных</a>.</p>
+  <div class="cookie__btns"><button type="button" class="cookie__ok" data-cookie="accepted">Принять</button><button type="button" class="cookie__no" data-cookie="declined">Отказаться</button></div>
+</div>
 
 <dialog class="order" id="order" aria-labelledby="order-title">
   <div class="order__box">
@@ -225,6 +228,11 @@
       <div class="order__total">
         <span>Итого</span>
         <output id="o-total" for="picker" aria-live="polite">0 ₽</output>
+      </div>
+      <div class="field field--check">
+        <input id="o-consent" name="consent" type="checkbox" aria-describedby="o-consent-err">
+        <label for="o-consent">Даю <a href="consent.html" target="_blank" rel="noopener">согласие на обработку персональных данных</a> по <a href="privacy.html" target="_blank" rel="noopener">политике</a></label>
+        <p class="field__err" id="o-consent-err" hidden>Без согласия заказ не отправить.</p>
       </div>
       <button class="btn btn--primary btn--wide" type="submit">Отправить заказ</button>
       <p class="order__demo">Демо-форма: заказ никуда не отправляется</p>

@@ -147,12 +147,16 @@
     var nameBad = !nameIn.value.trim();
     var phoneBad = !phoneOk(phoneIn.value);
     var itemsBad = total() === 0;
+    var consentIn = document.getElementById('o-consent');
+    var consentBad = !consentIn.checked;
     setErr(nameIn, 'o-name-err', nameBad);
     setErr(phoneIn, 'o-phone-err', phoneBad);
+    setErr(consentIn, 'o-consent-err', consentBad);
     document.getElementById('o-items-err').hidden = !itemsBad;
     if (nameBad) { nameIn.focus(); return; }
     if (phoneBad) { phoneIn.focus(); return; }
     if (itemsBad) { picker.querySelector('[data-step="1"]').focus(); return; }
+    if (consentBad) { consentIn.focus(); return; }
 
     var count = menu.reduce(function (s, m) { return s + qty[m.id]; }, 0);
     var when = timeSel.options[timeSel.selectedIndex].text.toLowerCase();
@@ -215,4 +219,20 @@
 
   buildPicker();
   render();
+})();
+
+// cookie banner: remembers the visitor's choice; the site sets no other cookies
+(function () {
+  var box = document.getElementById('cookie');
+  if (!box) return;
+  var saved = null;
+  try { saved = localStorage.getItem('zerno-cookie'); } catch (e) { /* storage blocked */ }
+  if (saved) return;
+  box.hidden = false;
+  box.addEventListener('click', function (e) {
+    var b = e.target.closest('button[data-cookie]');
+    if (!b) return;
+    try { localStorage.setItem('zerno-cookie', b.dataset.cookie); } catch (e2) { /* storage blocked */ }
+    box.hidden = true;
+  });
 })();
